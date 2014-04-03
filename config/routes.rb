@@ -1,21 +1,21 @@
 Podcastdiscovery::Application.routes.draw do
   resources :users do
-    resources :reviews
+    resources :lists do
+      resources :list_items, only: [:new, :create, :destroy, :index, :show]
+    end  
   end
 
-  resources :lists do
-    resources :list_items
-  end
 
-  resources :podcasts
+  resources :podcasts, only: [:new, :create, :destroy, :index, :show]
+  resources :reviews, only: [:new, :create, :destroy, :index, :show]
 
-
+  get "/search", to: "podcasts#search"
   get "/login", to: "session#new"
   post "/session", to: "session#create"
   delete "/session", to: "session#destroy"
 
 
   root "welcome#index"
-  match '/about' => 'pages#about'
-  match '/contact' => 'pages#contact'
+  get '/about' => 'pages#about'
+  get '/contact' => 'pages#contact'
 end

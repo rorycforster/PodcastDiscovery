@@ -42,7 +42,7 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  gem 'jasmine-rails'
+  gem 'jasmine'
   gem 'simplecov'
   gem 'launchy'
   gem "capybara-webkit"
