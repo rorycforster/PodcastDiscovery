@@ -1,0 +1,7 @@
+<h2 class="saved_headline">Welcome <%= @user.first_name %></h2>
+<%= link_to "Edit My Info", edit_user_path(@user), class: "edit-account" %>
+<%= form_tag user_path(@user), method: "delete", class: "delete-account" do %>
+<%= submit_tag("Delete My Account") %>
+<% end %>
+
+

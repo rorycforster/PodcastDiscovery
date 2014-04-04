@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :load_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate, :authorize, only: [:edit, :update]
+  before_action :authenticate, :authorize, only: [:show, :edit, :update]
 
   def new
     @user = User.new
@@ -21,9 +21,6 @@ class UsersController < ApplicationController
   def show
   end
 
-  def index
-  end
-
   def edit
     @update_worked = true
   end
@@ -33,6 +30,15 @@ class UsersController < ApplicationController
     session.destroy
     redirect_to root_path
   end
+
+  def update
+    @update_worked = @user.update(user_params)
+    if @update_worked
+      redirect_to user_path(@user)
+    else
+      render(:edit)
+    end
+  end
   
   private
 
@@ -41,18 +47,18 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :dob, :gender, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
 
   def authenticate
     unless logged_in?
-      redirect_to login_path
+      redirect_to root_path
     end
   end
 
   def authorize
     unless current_user == @user
-      redirect_to login_path
+      redirect_to root_path
     end
   end
 end
