@@ -1,0 +1,14 @@
+<h2>Search by Keyword</h2>
+<%= form_tag(podcasts_path, method: "get") do %>
+  <%= label_tag(:search_for, "Search for a keyword:") %>
+  <%= text_field_tag(:search_term) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<h2>Search by Genre</h2>
+<%= form_tag(podcasts_path, method: "get") do %>
+  <%= label_tag(:search_for, "Search for a genre:") %>
+  <%= text_field_tag(:search_term) %>
+  <%= submit_tag("Search") %>
+<% end %>

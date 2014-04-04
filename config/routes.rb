@@ -6,9 +6,10 @@ Podcastdiscovery::Application.routes.draw do
   end
 
 
-  resources :podcasts, only: [:new, :create, :destroy, :index, :show]
+  resources :podcasts, only: [:new, :create, :destroy, :index]
   resources :reviews, only: [:new, :create, :destroy, :index, :show]
 
+  get "/info", to: "podcasts#info"
   get "/search", to: "podcasts#search"
   get "/login", to: "session#new"
   post "/session", to: "session#create"

@@ -2,12 +2,9 @@
 <%= link_to "Edit My Info", edit_user_path(@user), class: "edit-account" %>
 <%= form_tag user_path(@user), method: "delete", class: "delete-account" do %>
 <%= submit_tag("Delete My Account") %>
+
+<a href="/search">Search for podcasts</a>
 <% end %>
 
 
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:search_for, "Search for:") %>
-  <%= text_field_tag(:search_text) %>
-  <%= submit_tag("Search") %>
-<% end %>

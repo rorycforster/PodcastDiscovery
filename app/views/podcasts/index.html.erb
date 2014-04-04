@@ -1,0 +1,9 @@
+<h2>Search Results</h2>
+
+<% @keyword_results_json.each do |result| %>
+<li>
+<%= link_to result["collectionName"], info_path(:title => result["collectionName"], :podcast_id => result["id"]) %>
+</li>
+<% end %>
+
+
