@@ -16,6 +16,6 @@ Podcastdiscovery::Application.routes.draw do
 
 
   root "welcome#index"
-  get '/about' => 'pages#about'
-  get '/contact' => 'pages#contact'
+  get '/about', to: 'pages#about'
+  get '/contact', to: 'pages#contact'
 end
