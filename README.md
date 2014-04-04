@@ -1,8 +1,8 @@
-== Podcast Discovery
+### Podcast Discovery
 
-### GA WDI NYC Jan 14, Project 3
+## GA WDI NYC Jan 14, Project 3
 
-### Overview
+## Overview
 
 **Podcast Discovery** is a web application that allows users to discover new podcasts, keep podcast lists, and review podcasts.  Podcast Discovery was developed as a Rails project for the January 2014 Web Development Immersive course at General Assembly. It was developed over a 6 day sprint to model the agile software development process.
 <!-- 
@@ -57,14 +57,14 @@
 * A registered user can view a bar graph visualization with each topic of the journey on it, and how long the user spent on the topic
 * A user can end the journey at any time by clicking the journey end button -->
 
-### ERD
+## ERD
 
-# [ERD created using Google Drawing](https://docs.google.com/drawings/d/1BnWh6lVHJyIdKfv2EYYYhqiKoTgom85sLM_xKrB2XqE/edit?usp=sharing)
+[ERD created using Google Drawing](https://docs.google.com/drawings/d/1BnWh6lVHJyIdKfv2EYYYhqiKoTgom85sLM_xKrB2XqE/edit?usp=sharing)
 
 <!-- # The public repository for Tangent on Github can be found here: -->
-### User Stories
+## User Stories
 
-# A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1052404)
+A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1052404)
 
 ---
 ###### Written by Rory Budnick
