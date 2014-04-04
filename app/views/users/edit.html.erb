@@ -1,12 +1,14 @@
-<% unless @update_worked %>
-<div id="errors">
-  <h3>Errors!</h3>
-  <ul>
-    <% @user.errors.messages.each do |field,error| %>
-    <li><em><%= "#{field.capitalize} #{error.first}!" %></em></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
+<div class="log_in_failure">
+  <% unless @update_worked %>
+  <div id="errors">
+    <h3>Errors!</h3>
+    <ul>
+      <% @user.errors.messages.each do |field,error| %>
+      <li><em><%= "#{field.capitalize} #{error.first}!" %></em></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-<%= render "form" %>
+  <%= render "form" %>
+</div>
