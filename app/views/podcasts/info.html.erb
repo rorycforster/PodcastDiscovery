@@ -1,1 +1,9 @@
-<h1><%= params[:data] %></h1>
+<h1><%= params[:title] %></h1>
+
+<%=params[:podcast_id] %>
+<%= @image %>
+
+<span>Description:</span>
+<p>
+<%= @description.to_s.gsub("<p>","").gsub("</p>","") %>
+</p>

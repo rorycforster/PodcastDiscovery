@@ -201,6 +201,7 @@ DEPENDENCIES
   jquery-rails
   json
   launchy
+  nokogiri
   pg
   pry-rails
   rails (= 4.0.3)
