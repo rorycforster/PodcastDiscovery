@@ -2,8 +2,9 @@
 
 <% @keyword_results_json.each do |result| %>
 <li>
-<%= link_to result["collectionName"], info_path(:title => result["collectionName"], :podcast_id => result["collectionId"]) %>
+  <img src=<%= result["artworkUrl600"] %> class="podcast-images">
+  <%= link_to result["collectionName"], info_path(:title => result["collectionName"], :podcast_id => result["collectionId"]) %>
 </li>
 <% end %>
 
-
+<a href="/">More</a>

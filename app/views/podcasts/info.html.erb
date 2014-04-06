@@ -1,9 +1,11 @@
 <h1><%= params[:title] %></h1>
 
-<%=params[:podcast_id] %>
-<%= @image %>
+<img src= <%= @image %> class="podcast-show-image">
 
 <span>Description:</span>
 <p>
 <%= @description.to_s.gsub("<p>","").gsub("</p>","") %>
 </p>
+
+
+<%= render "tweets" %>
