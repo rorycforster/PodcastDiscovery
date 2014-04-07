@@ -1,0 +1,5 @@
+<h2>Add "<%= params[:title] %>" to a Podcast List</h2>
+
+<%= link_to "Add to Existing List", confirm_path(:title => params[:title]) %>
+
+<%= link_to "Add to List", confirm_path(:title => params[:title]) %>

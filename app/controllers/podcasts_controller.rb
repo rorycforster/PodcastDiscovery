@@ -12,10 +12,6 @@ class PodcastsController < ApplicationController
     # genre_results = HTTParty.get(https://itunes.apple.com/search?entity=podcast&limit=25&genreIndex=#{params[:search_term]})
   end
 
-  def activities
-
-  end
-
   def info
     load_tweets
     info_httparty = HTTParty.get("https://itunes.apple.com/lookup?lang=en_us&id=#{params[:podcast_id]}")
@@ -25,7 +21,6 @@ class PodcastsController < ApplicationController
     url_to_scrape_for_description = @info_results_json["collectionViewUrl"]
     @doc = Nokogiri::HTML(open(url_to_scrape_for_description))
     @description = @doc.css("div.product-review p")
-
   end
   def search
   end

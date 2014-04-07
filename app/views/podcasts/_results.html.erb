@@ -5,6 +5,7 @@
   <img src=<%= result["artworkUrl600"] %> class="podcast-images">
   <%= link_to result["collectionName"], info_path(:title => result["collectionName"], :podcast_id => result["collectionId"]) %>
 </li>
+  <%= link_to "Add to List", confirm_path(:title => result["collectionName"]) %>
 <% end %>
 </div>
 
