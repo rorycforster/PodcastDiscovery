@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require pageless
+
+$('#results').pageless({
+  loaderMsg: 'Loading more results',
+});

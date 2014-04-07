@@ -1,0 +1,11 @@
+<div id="results">
+<% will_paginate @keyword_results_json %>
+<%@keyword_results_json.each do |result| %>
+<li>
+  <img src=<%= result["artworkUrl600"] %> class="podcast-images">
+  <%= link_to result["collectionName"], info_path(:title => result["collectionName"], :podcast_id => result["collectionId"]) %>
+</li>
+<% end %>
+</div>
+
+

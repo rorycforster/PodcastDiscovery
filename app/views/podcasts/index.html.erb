@@ -1,10 +1,12 @@
-<h2>Search Results</h2>
+<h2 id="header">
+Search Results
+</h2>
 
-<% @keyword_results_json.each do |result| %>
-<li>
-  <img src=<%= result["artworkUrl600"] %> class="podcast-images">
-  <%= link_to result["collectionName"], info_path(:title => result["collectionName"], :podcast_id => result["collectionId"]) %>
-</li>
-<% end %>
+<%= render "results" %>
 
-<a href="/">More</a>
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @keyword_results_json %>
+  </div>
+  <%= will_paginate @keyword_results_json, :container => false %>
+</div>

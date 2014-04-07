@@ -1,14 +1,21 @@
 require 'open-uri'
 require 'nokogiri'
 require 'httparty'
+require 'will_paginate/array'
 
 class PodcastsController < ApplicationController
 
   def index
-     results_httparty = HTTParty.get("https://itunes.apple.com/search?entity=podcast&limit=25&lang=en_us&term=#{params[:search_term]}")
+     results_httparty = HTTParty.get("https://itunes.apple.com/search?entity=podcast&limit=250&lang=en_us&term=#{params[:search_term]}")
     @keyword_results_json = JSON.parse(results_httparty)["results"]
+    @keyword_results_json = @keyword_results_json.paginate(:per_page => 20, :page => params[:page])
     # genre_results = HTTParty.get(https://itunes.apple.com/search?entity=podcast&limit=25&genreIndex=#{params[:search_term]})
   end
+
+  def activities
+
+  end
+
   def info
     load_tweets
     info_httparty = HTTParty.get("https://itunes.apple.com/lookup?lang=en_us&id=#{params[:podcast_id]}")

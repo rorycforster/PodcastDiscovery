@@ -24,7 +24,7 @@ header {
   margin-left: 59%;
   padding-top: 2em;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 header nav ul li {

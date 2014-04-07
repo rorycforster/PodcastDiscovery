@@ -9,3 +9,9 @@ img.podcast-show-image{
   height:160px;
   margin-left: 15px;
 }
+
+.floatingHeader {
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
