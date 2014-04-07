@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Podcast do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many(:reviews) }
+  it { should have_many(:list_items) }
+  it { should validate_presence_of(:name) }
 end
